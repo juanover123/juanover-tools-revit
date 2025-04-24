@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "JuanoverToolbox": {
+      "commandName": "Executable",
+      "executablePath": "E:\\Program Files\\Autodesk\\Revit 2025\\Revit.exe"
+    }
+  }
+}

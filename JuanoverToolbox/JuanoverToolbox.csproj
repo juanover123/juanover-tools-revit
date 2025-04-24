@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>warnings</Nullable>
+		<UseWPF>true</UseWPF>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+		<RootNamespace>JuanoverToolbox</RootNamespace>
+		<AssemblyName>JuanoverToolbox</AssemblyName>
+		<Configurations>Debug;Release;x64</Configurations>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<NoWarn>1701;1702;MSB3277</NoWarn>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<NoWarn>1701;1702;MSB3277</NoWarn>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='x64|AnyCPU'">
+	  <NoWarn>1701;1702;MSB3277</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="images\icons8-dinosaurio-16.png" />
+	  <None Remove="images\icons8-dinosaurio-24.png" />
+	  <None Remove="images\icons8-dinosaurio-32.png" />
+	  <None Remove="images\icons8-dinosaurio-48.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="RevitAPI">
+	    <HintPath>E:\Program Files\Autodesk\Revit 2025\RevitAPI.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	  <Reference Include="RevitAPIUI">
+	    <HintPath>E:\Program Files\Autodesk\Revit 2025\RevitAPIUI.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="images\icons8-dinosaurio-16.png" />
+	  <Resource Include="images\icons8-dinosaurio-24.png" />
+	  <Resource Include="images\icons8-dinosaurio-32.png" />
+	  <Resource Include="images\icons8-dinosaurio-48.png" />
+	</ItemGroup>
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+	  <Exec Command="if exist &quot;$(AppData)\Autodesk\REVIT\Addins\2025&quot; copy &quot;$(ProjectDir)*.addin&quot; &quot;$(AppData)\Autodesk\REVIT\Addins\2025&quot;&#xD;&#xA;if exist &quot;$(AppData)\Autodesk\REVIT\Addins\2025&quot; copy &quot;$(ProjectDir)$(OutputPath)*.dll&quot; &quot;$(AppData)\Autodesk\REVIT\Addins\2025&quot;" />
+	</Target>
+
+</Project>

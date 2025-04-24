@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>JuanoverToolbox</Name>
+    <Assembly>JuanoverToolbox.dll</Assembly>
+    <FullClassName>JuanoverToolbox.App</FullClassName>
+	<ClientId>30bda9b2-e076-4d40-b24e-6202cda48470</ClientId>
+	<VendorId>com.juanover.bimwave</VendorId>
+	<VendorDescription>Arq. Juan Garcia, https://www.linkedin.com/in/arqjuangarcia/</VendorDescription>
+  </AddIn>
+  <AddIn Type="Command">
+    <Text>Explotar Muros</Text>
+    <Description>Explota un muro en sus correspondientes capas, cada una como un muro único, vinculado, bloqueado y unido con el resto</Description>
+    <Assembly>JuanoverToolbox.dll</Assembly>
+    <FullClassName>JuanoverToolbox.Commands.WallExplode</FullClassName>
+    <ClientId>0a6c84b5-8acd-4b0f-a1e6-581bdb36b76c</ClientId>
+	<VendorId>com.juanover.bimwave</VendorId>
+	<VendorDescription>Arq. Juan Garcia, https://www.linkedin.com/in/arqjuangarcia/</VendorDescription>
+  </AddIn>
+  <AddIn Type="Command">
+    <Text>Crear filtros</Text>
+    <Assembly>JuanoverToolbox.dll</Assembly>
+    <FullClassName>JuanoverToolbox.Commands.CreateFilters</FullClassName>
+	<ClientId>d15d184d-fe14-465c-9aca-9b72d0e98410</ClientId>
+	<VendorId>com.juanover.bimwave</VendorId>
+	<VendorDescription>Arq. Juan Garcia, https://www.linkedin.com/in/arqjuangarcia/</VendorDescription>
+  </AddIn>
+  <AddIn Type="Command">
+    <Text>Crear leyendas a partir de filtros</Text>
+    <Assembly>JuanoverToolbox.dll</Assembly>
+    <FullClassName>JuanoverToolbox.Commands.CreateLegendFromFilters</FullClassName>
+	<ClientId>8cae133e-8bae-4fc3-b278-383b3b811d19</ClientId>
+	<VendorId>com.juanover.bimwave</VendorId>
+	<VendorDescription>Arq. Juan Garcia, https://www.linkedin.com/in/arqjuangarcia/</VendorDescription>
+  </AddIn>
+</RevitAddIns>
